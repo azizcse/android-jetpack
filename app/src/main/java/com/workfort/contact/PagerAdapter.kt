@@ -19,15 +19,23 @@ import android.support.v4.app.FragmentPagerAdapter
 */
 
 class PagerAdapter : FragmentPagerAdapter {
-    constructor(fragmentManager: FragmentManager, count: Int):super(fragmentManager){
+    var itemCount: Int
 
+    constructor(fragmentManager: FragmentManager, count: Int) : super(fragmentManager) {
+        this.itemCount = count
     }
 
-    override fun getItem(p0: Int): Fragment {
-       return null!!
+    override fun getItem(position: Int): Fragment {
+        when (position) {
+            0 -> return RecentFragment.newInstance("RecentFragment", "RecentFragment")
+            1 -> return BlockContactFragment.newInstance("BlockContactFragment", "BlockContactFragment")
+            2 -> return RejectWithSmsFragment.newInstance("RejectWithSmsFragment", "RejectWithSmsFragment")
+            else -> return null!!
+        }
+
     }
 
     override fun getCount(): Int {
-       return 3
+        return itemCount
     }
 }

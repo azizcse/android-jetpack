@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.workfort.contact.PagerAdapter
 import com.workfort.contact.databinding.FragmentHomeBinding
 
 
@@ -42,6 +43,21 @@ class HomeFragment : Fragment() {
         binding!!.tabLayout.addTab(binding!!.tabLayout.newTab().setText("Block"))
         binding!!.tabLayout.addTab(binding!!.tabLayout.newTab().setText("Reject"))
         binding!!.tabLayout.tabGravity = TabLayout.GRAVITY_FILL
+
+        val pagerAdapter = PagerAdapter(activity!!.supportFragmentManager, binding!!.tabLayout.tabCount)
+
+        binding!!.pager.adapter = pagerAdapter
+        binding!!.pager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding!!.tabLayout))
+
+        binding!!.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab) {
+                binding!!.pager.setCurrentItem(tab.position)
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab) {}
+
+            override fun onTabReselected(tab: TabLayout.Tab) {}
+        })
 
         return binding!!.root
     }

@@ -47,7 +47,7 @@ class BlockContactFragment : Fragment() {
     fun onButtonPressed(uri: Uri) {
         listener?.onFragmentInteraction(uri)
     }
-
+/*
     override fun onAttach(context: Context) {
         super.onAttach(context)
         if (context is OnFragmentInteractionListener) {
@@ -55,7 +55,7 @@ class BlockContactFragment : Fragment() {
         } else {
             throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
         }
-    }
+    }*/
 
     override fun onDetach() {
         super.onDetach()
