@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/main_fragment">
+
+    <fragment android:id="@+id/main_fragment"
+        android:label="Home"
+        android:name="com.workfort.contact.ui.home.HomeFragment">
+        <action
+            android:id="@+id/action_main_fragment_to_recentFragment"
+            app:destination="@id/recentFragment" />
+        <action
+            android:id="@+id/action_main_fragment_to_blockContactFragment"
+            app:destination="@id/blockContactFragment" />
+        <action
+            android:id="@+id/action_main_fragment_to_rejectWithSmsFragment"
+            app:destination="@id/rejectWithSmsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/contact_add_fragment"
+        android:name="com.workfort.contact.ui.addcontact.FragmentAddContact"
+        android:label="Contact add"
+        tools:layout="@layout/fragment_add_contact">
+
+        <argument android:name="item_value"
+            android:defaultValue="hello"
+            app:type="string"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/recentFragment"
+        android:name="com.workfort.contact.RecentFragment"
+        android:label="fragment_recent"
+        tools:layout="@layout/fragment_recent" >
+        <action
+            android:id="@+id/action_recentFragment_to_contact_add_fragment"
+            app:destination="@id/contact_add_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blockContactFragment"
+        android:name="com.workfort.contact.BlockContactFragment"
+        android:label="fragment_block_contact"
+        tools:layout="@layout/fragment_block_contact" >
+        <action
+            android:id="@+id/action_blockContactFragment_to_contact_add_fragment"
+            app:destination="@id/contact_add_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rejectWithSmsFragment"
+        android:name="com.workfort.contact.RejectWithSmsFragment"
+        android:label="fragment_reject_with_sms"
+        tools:layout="@layout/fragment_reject_with_sms" >
+        <action
+            android:id="@+id/action_rejectWithSmsFragment_to_contact_add_fragment"
+            app:destination="@id/contact_add_fragment" />
+    </fragment>
+
+</navigation>
