@@ -7,8 +7,7 @@ import android.support.v4.view.ViewPager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.workfort.contact.PagerAdapter
+import com.workfort.contact.ui.main.PagerAdapter
 import com.workfort.contact.databinding.FragmentHomeBinding
 
 

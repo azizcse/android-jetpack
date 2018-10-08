@@ -1,8 +1,11 @@
-package com.workfort.contact
+package com.workfort.contact.ui.main
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
+import com.workfort.contact.ui.block.BlockContactFragment
+import com.workfort.contact.ui.recent.RecentFragment
+import com.workfort.contact.ui.reject.RejectWithSmsFragment
 
 
 /*

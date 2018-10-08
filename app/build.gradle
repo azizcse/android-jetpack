@@ -32,6 +32,9 @@ dependencies {
     //noinspection GradleCompatible
     implementation "com.android.support:appcompat-v7:$support_lib_version"
     implementation "com.android.support.constraint:constraint-layout:$constant_layout"
+    //room
+   // kapt "androidx.room:room-compiler:$roomVersion"
+    //implementation "androidx.room:room-runtime:$roomVersion"
     // LiveData + ViewModel
     implementation 'android.arch.lifecycle:extensions:1.1.1'
     // Navigation

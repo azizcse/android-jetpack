@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/recentFragment"
-        android:name="com.workfort.contact.RecentFragment"
+        android:name="com.workfort.contact.ui.recent.RecentFragment"
         android:label="fragment_recent"
         tools:layout="@layout/fragment_recent" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/blockContactFragment"
-        android:name="com.workfort.contact.BlockContactFragment"
+        android:name="com.workfort.contact.ui.block.BlockContactFragment"
         android:label="fragment_block_contact"
         tools:layout="@layout/fragment_block_contact" >
         <action
@@ -49,7 +49,7 @@
     </fragment>
     <fragment
         android:id="@+id/rejectWithSmsFragment"
-        android:name="com.workfort.contact.RejectWithSmsFragment"
+        android:name="com.workfort.contact.ui.reject.RejectWithSmsFragment"
         android:label="fragment_reject_with_sms"
         tools:layout="@layout/fragment_reject_with_sms" >
         <action
